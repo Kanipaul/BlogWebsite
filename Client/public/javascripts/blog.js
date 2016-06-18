@@ -84,6 +84,94 @@ var Home = React.createClass({
     				</div>
     			</div>
     		</div>
+
+        <div className="row section recentworks topspace">
+        <h2 className="section-title"><span>Recent Technologies</span></h2>
+
+			     <div className="thumbnails recentworks row">
+
+				<div className="col-md-4">
+					<a className="thumbnail" href="sidebar-right.html">
+						<span className="img">
+							<img src="images/s1.jpeg" alt="" />
+							<span className="cover"><span className="more">See details &rarr;</span></span>
+						</span>
+						<span className="title">Technology screen eye panel</span>
+					</a>
+					<span className="details"><a href="">Web design</a> | <a href="">Wordpress</a> | <a href="">Logotype</a></span>
+					<h4></h4>
+					<p></p>
+				</div>
+
+				<div className="col-md-4">
+					<a className="thumbnail" href="sidebar-right.html">
+						<span className="img">
+							<img src="images/s2.jpeg" alt="" />
+							<span className="cover"><span className="more">See details &rarr;</span></span>
+						</span>
+						<span className="title">The Bionic Eye: A Retinal Implant</span>
+					</a>
+					<span className="details"><a href="">Web design</a> | <a href="">Wordpress</a></span>
+					<h4></h4>
+					<p></p>
+				</div>
+
+				<div className="col-md-4">
+					<a className="thumbnail" href="sidebar-right.html">
+						<span className="img">
+							<img src="images/s3.jpeg" alt="" />
+							<span className="cover"><span className="more">See details &rarr;</span></span>
+						</span>
+						<span className="title">Apple Biosensing iWatch</span>
+					</a>
+					<span className="details"><a href="">Web design</a> | <a href="">Logotype</a></span>
+					<h4></h4>
+					<p></p>
+				</div>
+
+				<div className="col-md-4">
+					<a className="thumbnail" href="sidebar-right.html">
+						<span className="img">
+							<img src="images/s4.jpeg" alt="" />
+							<span className="cover"><span className="more">See details &rarr;</span></span>
+						</span>
+						<span className="title">Sony Nextep design</span>
+					</a>
+					<span className="details"><a href="">Web design</a> | <a href="">Wordpress</a></span>
+					<h4></h4>
+					<p></p>
+				</div>
+
+				<div className="col-md-4">
+					<a className="thumbnail" href="sidebar-right.html">
+						<span className="img">
+							<img src="images/s5.jpeg" alt="" />
+							<span className="cover"><span className="more">See details &rarr;</span></span>
+						</span>
+						<span className="title">Touch Screen Interface</span>
+					</a>
+					<span className="details"><a href="">Web design</a> | <a href="">Logotype</a></span>
+					<h4></h4>
+					<p></p>
+				</div>
+
+				<div className="col-md-4">
+					<a className="thumbnail" href="sidebar-right.html">
+						<span className="img">
+							<img src="images/s6.jpeg" alt="" />
+							<span className="cover"><span className="more">See details &rarr;</span></span>
+						</span>
+						<span className="title">Phone on Palm</span>
+					</a>
+					<span className="details"><a href="">Web design</a> | <a href="">Logotype</a></span>
+					<h4></h4>
+					<p></p>
+				</div>
+			</div>
+
+		</div>
+
+
       </div>
       </main>
 
@@ -165,7 +253,7 @@ var Blog = React.createClass({
     return(
 
       <div>
-      <img src="images/Tech2.jpeg" height="350px;" width ="1070px;"/>
+      <img src="images/Tech6.jpeg" height="350px;" width ="1070px;"/>
       <Blogs data = {this.state.data} />
       <footer id="footer" className="topspace">
       	<div className="container">
@@ -221,59 +309,99 @@ var Blog = React.createClass({
 });
 
 // Blogs component
-    var Blogs = React.createClass({
-      render : function(){
-        return (
-        <div>
-        {
-          this.props.data.map(function(result){
-      return (
-        <div className ="home">
-            <div className="parallax" parallax-speed="2">
-            <h1 id="logo" className="text-center">
-            </h1>
-            </div>
-            <main id="main">
-             <div className="container">
-               <div className="row topspace">
-                  <div className="col-sm-8 col-sm-offset-2">
-                     <article className="post">
-                     <header className="entry-header">
-                     <div className="entry-meta">
-                    <span className="posted-on"><time className="entry-date published" date="2013-06-17">{result.Date}</time></span>
-                    </div>
-                    <h1 className="entry-title"><a href="single.html" rel="bookmark">{result.Title}</a></h1>
-                    </header>
-                    <div className="entry-content">
-                    <p><img alt="" src={result.Image}/></p>
-                    <p>{result.Description} <a href="single.html" class="more-link">Continue reading&#8230;</a></p>
-                    </div>
-                    </article>
-                   </div>
-                   </div>
-                   </div>
-                         <center className="">
-                           <ul className="pagination">
-                             <li className="disabled"><a href="">&laquo;</a></li>
-                             <li className="active"><a href="">1</a></li>
-                             <li><a href="">2</a></li>
-                             <li><a href="">3</a></li>
-                             <li><a href="">4</a></li>
-                             <li><a href="">5</a></li>
-                             <li><a href="">6</a></li>
-                             <li><a href="">&raquo;</a></li>
-                           </ul>
-                         </center>
+var Blogs = React.createClass({
+  render : function(){
+  return (
+  <div>
+    {
+    this.props.data.map(function(result){
+    return (
+   <div className ="home">
+   <div className="parallax" parallax-speed="2">
+  <h1 id="logo" className="text-center">
+  </h1>
+  </div>
+  <main id="main">
+  <div className="container">
+   <div className="row topspace">
+      <div className="col-sm-8 col-sm-offset-2">
+     <article className="post">
+    <header className="entry-header">
+   <div className="entry-meta">
+    <span className="posted-on"><time className="entry-date published" date="2013-06-17">{result.Date}</time></span>
+    </div>
+  <h1 className="entry-title"><a href="single.html" rel="bookmark">{result.Title}</a></h1>
+  </header>
+  <div className="entry-content">
+  <p><img alt="" src={result.Image}/></p>
+  <p>{result.Description} <BlogDetails Title ={result.Title} /></p>
+  </div>
+  </article>
+  </div>
+  </div>
+  </div>
+
     </main>
     </div>
       );
     }
     )}
+    <center className="">
+      <ul className="pagination">
+        <li className="disabled"><a href="">&laquo;</a></li>
+          <li className="active"><a href="">1</a></li>
+            <li><a href="">2</a></li>
+              <li><a href="">3</a></li>
+               <li><a href="">4</a></li>
+              <li><a href="">5</a></li>
+              <li><a href="">6</a></li>
+            <li><a href="">&raquo;</a></li>
+        </ul>
+        </center>
     </div>
     );
     }
     });
 
+
+// Blog Details component
+var BlogDetails = React.createClass({
+  getInitialState : function(){
+    return {data :[]};
+  },
+  getFullBlog : function(){
+    $.ajax({
+      url: '/api/blogs/'+this.props.Title,
+      dataType: 'json',
+      cache: false,
+      type: 'GET',
+      success: function(data) {
+        console.log("success");
+        }
+      });
+  },
+  render : function(){
+    return(
+      <div>
+      <a href="#" onClick ={this.getFullBlog} class="more-link">Continue reading&#8230;</a>
+      <FullBlog data ={this.props.data} />
+      </div>
+    );
+  }
+});
+
+// Full Blog component
+var FullBlog = React.createClass({
+  render : function(){
+    return(
+      <div>
+      {this.props.Date}
+      {this.props.Title}
+      {this.props.Description}
+      </div>
+    );
+  }
+});
 // Main Route
 var browserHistory = ReactRouter.browserHistory;
 ReactDOM.render(
@@ -283,6 +411,7 @@ ReactDOM.render(
     <IndexRoute component = {Home} />
       <Route path="/home" component={Home} />
       <Route path="/blog" component={Blog} />
+      <Route path="/single" component ={BlogDetails} />
       </Route>
   </Router>
 ),
