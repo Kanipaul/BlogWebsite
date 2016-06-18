@@ -9,6 +9,7 @@ var BlogContainer = React.createClass({
       <main>
       {this.props.children}
       </main>
+      <Footer />
       </div>
     );
   }
@@ -174,58 +175,71 @@ var Home = React.createClass({
 
       </div>
       </main>
-
-<footer id="footer" className="topspace">
-	<div className="container">
-		<div className="row">
-			<div className="col-md-3 widget">
-				<h3 className="widget-title">Contact</h3>
-				<div className="widget-body">
-					<p>+234 23 9873237<br/>
-						<a href="mailto:#">some.email@somewhere.com</a><br/>
-						<br/>
-						234 Hidden Pond Road, Ashland City, TN 37015
-					</p>
-				</div>
-			</div>
-
-			<div className="col-md-3 widget">
-				<h3 className="widget-title">Follow me</h3>
-				<div className="widget-body">
-					<p className="follow-me-icons">
-						<a href=""><img src="images/facebook.jpeg" /></a>
-						<a href=""><img src="images/twitter.jpeg" /></a>
-						<a href=""><img src="images/google.jpeg" /></a>
-
-					</p>
-				</div>
-			</div>
-
-			<div className="col-md-3 widget">
-				<h3 className="widget-title">Text widget</h3>
-				<div className="widget-body">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
-				</div>
-			</div>
-
-			<div className="col-md-3 widget">
-				<h3 className="widget-title">Form widget</h3>
-				<div className="widget-body">
-					<p>+234 23 9873237<br/>
-						<a href="mailto:#">some.email@somewhere.com</a><br/>
-						<br/>
-						234 Hidden Pond Road, Ashland City, TN 37015
-					</p>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</footer>
   </div>
     );
   }
+});
+
+// Footer component
+var Footer = React.createClass({
+  render : function(){
+    return(
+      <div>
+      <footer id="footer" className="topspace">
+      	<div className="container">
+      		<div className="row">
+      			<div className="col-md-4 widget">
+      				<h3 className="widget-title">Contact us</h3>
+      				<div className="widget-body">
+      					<p>+234 23 9873237<br/>
+      						<a href="mailto:#">some.email@somewhere.com</a><br/>
+      						<br/>
+      						234 Hidden Pond Road, Ashland City, TN 37015
+      					</p>
+      				</div>
+      			</div>
+
+      			<div className="col-md-4 widget">
+      				<h3 className="widget-title">Follow us</h3>
+      				<div className="widget-body">
+      					<p className="follow-me-icons">
+                <a href ="https://www.twitter.com">
+                <span className="fa-stack fa-lg">
+                    <i className="fa fa-circle fa-stack-2x"></i>
+                    <i className="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+                </a>
+
+                <a href="https://www.facebook.com">
+                <span className="fa-stack fa-lg">
+                    <i className="fa fa-circle fa-stack-2x"></i>
+                    <i className="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+                </a>
+
+                <a href="https://github.com">
+                <span className="fa-stack fa-lg">
+                    <i className="fa fa-circle fa-stack-2x"></i>
+                    <i className="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+                </a>
+      					</p>
+      				</div>
+      			</div>
+
+      			<div className="col-md-4 widget">
+      				<h3 className="widget-title">About us</h3>
+      				<div className="widget-body">
+      					<p>Tech blogs brings together the reach of global and the depth of local, delivering 24/7 news coverage and analysis on the trends, technologies and opportunities that matter to IT professionals and decision makers.</p>
+      				</div>
+      			</div>
+      		</div>
+      	</div>
+      </footer>
+      </div>
+    );
+  }
+
 });
 
 // Blog component
@@ -255,54 +269,6 @@ var Blog = React.createClass({
       <div>
       <img src="images/Tech6.jpeg" height="350px;" width ="1070px;"/>
       <Blogs data = {this.state.data} />
-      <footer id="footer" className="topspace">
-      	<div className="container">
-      		<div className="row">
-      			<div className="col-md-3 widget">
-      				<h3 className="widget-title">Contact</h3>
-      				<div className="widget-body">
-      					<p>+234 23 9873237<br/>
-      						<a href="mailto:#">some.email@somewhere.com</a><br/>
-      						<br/>
-      						234 Hidden Pond Road, Ashland City, TN 37015
-      					</p>
-      				</div>
-      			</div>
-
-      			<div className="col-md-3 widget">
-      				<h3 className="widget-title">Follow me</h3>
-      				<div className="widget-body">
-      					<p className="follow-me-icons">
-      						<a href=""><img src="images/facebook.jpeg" /></a>
-      						<a href=""><img src="images/twitter.jpeg" /></a>
-      						<a href=""><img src="images/google.jpeg" /></a>
-
-      					</p>
-      				</div>
-      			</div>
-
-      			<div className="col-md-3 widget">
-      				<h3 className="widget-title">Text widget</h3>
-      				<div className="widget-body">
-      					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
-      					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
-      				</div>
-      			</div>
-
-      			<div className="col-md-3 widget">
-      				<h3 className="widget-title">Form widget</h3>
-      				<div className="widget-body">
-      					<p>+234 23 9873237<br/>
-      						<a href="mailto:#">some.email@somewhere.com</a><br/>
-      						<br/>
-      						234 Hidden Pond Road, Ashland City, TN 37015
-      					</p>
-      				</div>
-      			</div>
-
-      		</div>
-      	</div>
-      </footer>
       </div>
     );
   }
